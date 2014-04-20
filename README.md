@@ -1,4 +1,8 @@
-## Read Me File (Coursera Project for Getting and Cleaning Data)
+## Read Me 
+### Coursera Project for Getting and Cleaning Data)
+
+This information will help you get and place the data in the proper place on your computer to run the run_analysis.R script also contained in this repo.
+
 
 ### File placement
 The data for this project is found in the .zip file available at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
