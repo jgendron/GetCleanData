@@ -1,35 +1,78 @@
 # Wearable Computing
-## Creating a Tidy Dataset from Available Data on Samsung Galaxy S Smartphones
+## Creating a Tidy Dataset from Publically Available Data on Samsung Galaxy S Smartphones
 ====================================
 
+![alt text](http://archive.ics.uci.edu/ml/assets/logo.gif)  
+Source: archive.ics.uci.edu/ml/assets/logo.gif  
 
-----------------------------------
-Reference
-Reyes-Ortiz, J.L., Anguita, D., Ghio, A., & Oneto, L. (2012, December). *Human activity recognition on smartphones using a multiclass hardware-friendly support vector machine.* Retreived from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+**References:**  
+[1] Reyes-Ortiz, J.L., Anguita, D., Ghio, A., & Oneto, L. (2012, December). *Human activity recognition on smartphones using a multiclass hardware-friendly support vector machine.* Retreived from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.  
+[2] Coursera Data Source. Retrieved from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.  
+ 
+### CONTENTS 
+
+**1) Variable Dictionary**  
+**2) Data Files Required to Reproduce Analysis**    
+**3) Data Transformations in script run_analysis.R**  
+====  
+
+#### Variable Dictionary  
+
+All data is based on work by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto [1] and furthered refined by course instructors [2].  
+
+A total of 81 variables appears in the synthesized tidy dataset. The first two are identifier variables:  
+* subjectid - categorical variable identifying the subject by identification number {1 through 30}  
+* activities - categorical variable identifying one of six activities taken by the subject {walking, walkingupstairs, walkingdownstairs, sitting, standing, laying}. It is the dependent variable.  
+
+The remaining 79 variables are all numerical and serve as the explanatory (independent) variables. The 79 variables are comprised of two categories of signals: time domain and frequency domain:  
+
+**Time domain signals (variables) - as denoted by the "t" prefix**  
+| H1 | h2 |
+|------------------------------------|------------------------------------|
+| ASDF | ASDF |
 
 
-=================================
-##CONTENTS
 
-###1) Data Files Used in Project
-###2) Data Transformations
-###3) Data Dictionary
-=================================
+Two basic classes of variables were constructed from 
 
+The set of variables that were estimated from these signals are: 
 
-
-###Original files in the dataset
-
-All data is based on work by
-
-Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
-Smartlab - Non Linear Complex Systems Laboratory
-DITEN - Università degli Studi di Genova.
-Via Opera Pia 11A, I-16145, Genoa, Italy.
-activityrecognition@smartlab.ws
-www.smartlab.ws
+mean(): Mean value
+std(): Standard deviation
 
 
+  
+
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* tBodyGyro-XYZ
+* tBodyGyroJerk-XYZ
+* tBodyAccMag
+* tGravityAccMag
+* tBodyAccJerkMag
+* tBodyGyroMag
+* tBodyGyroJerkMag  
+
+* fBodyAcc-XYZ
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
+
+These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+
+#### Original files in the dataset
 The merged dataset consisted of eight files:
 
 Dependent Variables:
@@ -86,20 +129,33 @@ For purposes of this data analysis, seven variables including the word "Mean" we
 
 ##Variable Dictionary
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+
+
+
+
+
+
+
+
+
+
+
+
+
+Title
+========================================================
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
+
+When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r fig.width=7, fig.height=6}
+plot(cars)
+```
+
