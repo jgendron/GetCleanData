@@ -25,37 +25,63 @@ A total of 81 variables appears in the synthesized tidy dataset. The first two a
 * subjectid - categorical variable identifying the subject by identification number {1 through 30}  
 * activities - categorical variable identifying one of six activities taken by the subject {walking, walkingupstairs, walkingdownstairs, sitting, standing, laying}. It is the dependent variable.  
 
-The remaining 79 variables are all numerical and serve as the explanatory (independent) variables. The 79 variables are comprised of two categories of signals: time domain and frequency domain:  
+The remaining 79 variables are all numerical and serve as the explanatory (independent) variables. The 79 variables are comprised of two categories of signals: time domain and frequency domain. These signals were used to estimate variables of the feature vector for each pattern.  
 
-**Time domain signals (variables) - as denoted by the "t" prefix**  
+**Time domain signals (variables) - as denoted by the 't' prefix**
+*Note:*  
+*'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.*  
+*mean() indicates Mean value and std() indicates Standard Deviation*  
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Variable               | Description                               |
+| -----------------------| ----------------------------------------- |
+| tbodyacc-mean()-x      | mean of body accelerometer signal in X    |
+| tbodyacc-mean()-y      | mean of body accelerometer signal in Y    |
+| tbodyacc-mean()-z      | mean of body accelerometer signal in Z    |
+| tbodyacc-std()-x       | s.d. of body accelerometer signal in X    |  
+| tbodyacc-std()-y       | s.d. of body accelerometer signal in Y    |  
+| tbodyacc-std()-z       | s.d. of body accelerometer signal in Z    |  
+| tgravityacc-mean()-x   | mean of gravity accelerometer signal in X | 
+| tgravityacc-mean()-y   | mean of gravity accelerometer signal in Y |   
+| tgravityacc-mean()-z   | mean of gravity accelerometer signal in Z |   
+| tgravityacc-std()-x    | s.d. of gravity accelerometer signal in X |   
+| tgravityacc-std()-y    | s.d. of gravity accelerometer signal in Y |
+| tgravityacc-std()-z    | s.d. of gravity accelerometer signal in Z |
+| tbodyaccjerk-mean()-x  | mean of body linear acceleration in X     | 
+| tbodyaccjerk-mean()-y  | mean of body linear acceleration in Y     |  
+| tbodyaccjerk-mean()-z  | mean of body linear acceleration in Z     |  
+| tbodyaccjerk-std()-x   | s.d. of body linear acceleration in X     |  
+| tbodyaccjerk-std()-y   | s.d. of body linear acceleration in Y     |  
+| tbodyaccjerk-std()-z   | s.d. of body linear acceleration in Z     | 
+| tbodygyro-mean()-x     | mean of gyroscope 3-axial signal in X     |
+| tbodygyro-mean()-y     | mean of gyroscope 3-axial signal in Y     |
+| tbodygyro-mean()-z     | mean of gyroscope 3-axial signal in Z     |
+| tbodygyro-std()-x      | s.d. of gyroscope 3-axial signal in X     |
+| tbodygyro-std()-y      | s.d. of gyroscope 3-axial signal in Y     |
+| tbodygyro-std()-z      | s.d. of gyroscope 3-axial signal in Z     |
+| tbodygyrojerk-mean()-x | mean of angular velocity in X             |
+| tbodygyrojerk-mean()-y | mean of angular velocity in Y             |
+| tbodygyrojerk-mean()-z | mean of angular velocity in Z             |
+| tbodygyrojerk-std()-x  | s.d. of angular velocity in X             |
+| tbodygyrojerk-std()-y  | s.d. of angular velocity in Y             |
+| tbodygyrojerk-std()-z  | s.d. of angular velocity in Z             |
+| tbodyaccmag-mean()     | mean of magnitude of bodyacc signal       |
+| tbodyaccmag-std()      | s.d. of magnitude of bodyacc signal       |
+| tgravityaccmag-mean()  | mean of magnitude of gravityacc signal    |
+| tgravityaccmag-std()   | s.d. of magnitude of gravityacc signal    |
+| tbodyaccjerkmag-mean() | mean of magnitude of bodyaccjerk signal   |
+| tbodyaccjerkmag-std()  | s.d. of magnitude of bodyaccjerk signal   |
+| tbodygyromag-mean()    | mean of magnitude of bodygyro signal      |
+| tbodygyromag-std()     | s.d. of magnitude of bodygyro signal      |
+| tbodygyrojerkmag-mean()| mean of magnitude of bodygyrojerk signal  |
+| tbodygyrojerkmag-std() | s.d. of magnitude of bodygyrojerk signal  |
+
+**Frequency domain signals (variables) - as denoted by the 'f' prefix**
+*Note:*  
+*'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.*  
+*mean() indicates Mean value and std() indicates Standard Deviation*
 
 
-Two basic classes of variables were constructed from 
 
-The set of variables that were estimated from these signals are: 
-
-mean(): Mean value
-std(): Standard deviation
-
-
-  
-
-* tBodyAcc-XYZ
-* tGravityAcc-XYZ
-* tBodyAccJerk-XYZ
-* tBodyGyro-XYZ
-* tBodyGyroJerk-XYZ
-* tBodyAccMag
-* tGravityAccMag
-* tBodyAccJerkMag
-* tBodyGyroMag
-* tBodyGyroJerkMag  
 
 * fBodyAcc-XYZ
 * fBodyAccJerk-XYZ
@@ -161,4 +187,3 @@ You can also embed plots, for example:
 ```{r fig.width=7, fig.height=6}
 plot(cars)
 ```
-
