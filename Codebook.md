@@ -14,6 +14,7 @@ Source: archive.ics.uci.edu/ml/assets/logo.gif
 **1) Variable Dictionary**  
 **2) Data Files Required to Reproduce Analysis**    
 **3) Data Transformations in script run_analysis.R**  
+
 ====  
 
 #### Variable Dictionary  
@@ -27,10 +28,12 @@ A total of 81 variables appears in the synthesized tidy dataset. The first two a
 The remaining 79 variables are all numerical and serve as the explanatory (independent) variables. The 79 variables are comprised of two categories of signals: time domain and frequency domain:  
 
 **Time domain signals (variables) - as denoted by the "t" prefix**  
-| H1 | h5 |
-|------------------------------------|------------------------------------|
-| ASDF | ASDF |
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 
 Two basic classes of variables were constructed from 
