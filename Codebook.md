@@ -27,7 +27,7 @@ A total of 81 variables appears in the synthesized tidy dataset. The first two a
 The remaining 79 variables are all numerical and serve as the explanatory (independent) variables. The 79 variables are comprised of two categories of signals: time domain and frequency domain:  
 
 **Time domain signals (variables) - as denoted by the "t" prefix**  
-| H1 | h2 |
+| H1 | h5 |
 |------------------------------------|------------------------------------|
 | ASDF | ASDF |
 
