@@ -9,7 +9,7 @@ Source: archive.ics.uci.edu/ml/assets/logo.gif
 [1] Reyes-Ortiz, J.L., Anguita, D., Ghio, A., & Oneto, L. (2012, December). *Human activity recognition on smartphones using a multiclass hardware-friendly support vector machine.* Retrieved from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.  
 [2] Coursera Data Source. Retrieved from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.  
  
-### CONTENTS 
+### CODEBOOK CONTENTS 
 
 **1) Variable Dictionary**  
 **2) Data Files Required to Reproduce Analysis**    
