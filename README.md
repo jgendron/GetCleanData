@@ -13,7 +13,7 @@ Source: archive.ics.uci.edu/ml/assets/logo.gif
 ### README CONTENTS 
 
 **1) File Download and Placement**  
-**2) R Packages Required to Execute Script** 
+**2) R Packages Required to Execute Script**  
 **3) Information About the Dataset**
 
 ====  
@@ -60,5 +60,5 @@ The source data was collected during an experiment utilizing 30 subjects. Here i
 
 The [CodeBook.md](../master/Codebook.md) contained in this repository and the file *features_info.txt* provide additional details about the data.
 
-Again, thank you for your interest in this analysis. I look forward to your comments and feedback. 
+Again, thank you for your interest in this analysis. I look forward to your comments and feedback.  
 *Jay Gendron*
