@@ -6,14 +6,14 @@
 Source: archive.ics.uci.edu/ml/assets/logo.gif  
 
 **References:**  
-[1] Coursera Data Source. Retrieved from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+[1] Coursera Data Source. Retrieved from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. 
 [2] Reyes-Ortiz, J.L., Anguita, D., Ghio, A., & Oneto, L. (2012, December). *Human activity recognition on smartphones using a multiclass hardware-friendly support vector machine.* Retrieved from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.  
   
  
 ### README CONTENTS 
 
 **1) File Download and Placement**  
-**2) R Packages Required to Execute Script**
+**2) R Packages Required to Execute Script** 
 **3) Information About the Dataset**
 
 ====  
@@ -52,15 +52,13 @@ The only package required in the script is the *data.table* package. You can che
 
 The *library(data.table)* command is already included in the script so if you have the package loaded the script will activate the package.
 
-Again, thank you very much for your interest.
-
 #### 3) Information About the Dataset
 
 The source data was collected during an experiment utilizing 30 subjects. Here is a description of the data as noted by Reyes-Ortiz, Anguita, Ghio, and Oneto [2]:
 
 >The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
-The [CodeBook.md](../blob/master/Codebook.md) contained in this repository and the file *features_info.txt* provide additional details about the data.
+The [CodeBook.md](../master/Codebook.md) contained in this repository and the file *features_info.txt* provide additional details about the data.
 
-Again, thank you for your interest in this analysis. I look forward to your comments and feedback.
+Again, thank you for your interest in this analysis. I look forward to your comments and feedback. 
 *Jay Gendron*
