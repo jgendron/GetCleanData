@@ -2,8 +2,9 @@
 ## Creating a Tidy Dataset from Publically Available Data on Samsung Galaxy S Smartphones
 ====================================
 
-![alt text](http://icons.iconarchive.com/icons/jonathan-rey/devices-pack-3/256/Smartphone-Android-Jelly-Bean-Samsung-Galaxy-S4-icon.png)  
-Source: http://bit.ly/1r6HmmF  
+![alt text](http://icons.iconarchive.com/icons/jonathan-rey/devices-pack-3/256/Smartphone-Android-Jelly-Bean-Samsung-Galaxy-S4-icon.png) ![alt text](http://www.geek.com/wp-content/uploads/2012/02/iron-man-hud.png)  
+Sources: http://bit.ly/1r6HmmF  
+http://www.geek.com/wp-content/uploads/2012/02/iron-man-hud.png  
 
 **References:**  
 [1] Coursera Data Source. Retrieved from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.  
@@ -20,7 +21,7 @@ Source: http://bit.ly/1r6HmmF
 
 #### 1) File Download and Placement  
 
-Thank you for taking an interest in this data analysis. The information in this README file will help you download the source data and place the data in the proper directory on your computer so the R script *run_analysis.R* executes properly. This is the only script necessary to reproduce this data analysis.
+Thank you for taking an interest in this data analysis. The information in this README file will help you download the source data and place the data in the proper directory on your computer so the R script [run_analysis.R](../master/run_analysis.R) executes properly. This is the only script necessary to reproduce this data analysis.
 
 **File Download**
 
@@ -30,7 +31,7 @@ The data for this project was provided by the course instructor [1] and is based
 
 Once downloaded, you must extract all the files such that all files are located in a folder called "UCI HAR Dataset". There are 
 
->**Please Note**: Be sure that during the extraction you place the files in the correct location. Very often, the file extraction utility will create a folder "UCI HAR Dataset" and then place **another folder of the same name** within that folder. To avoid this, at the dialog box that says *"Files will be extracted to this folder"* ensure that "UCI HAR Dataset" is not included in the path.
+>**Please Note**: Be sure that during the extraction you place the files in the correct location. Very often, the file extraction utility will create a folder "UCI HAR Dataset" and then place **another folder of the same name** within that folder. To avoid this, at the dialog box that says *"Files will be extracted to this folder..."* ensure that "UCI HAR Dataset" is not included in the path.
 
 Once complete you should see the following files in a folder called "UCI HAR Dataset":
 * *README.txt*
