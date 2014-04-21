@@ -25,9 +25,9 @@ A total of 81 variables appears in the synthesized tidy dataset. The first two a
 * subjectid - categorical variable identifying the subject by identification number {1 through 30}  
 * activities - categorical variable identifying one of six activities taken by the subject {walking, walkingupstairs, walkingdownstairs, sitting, standing, laying}. It is the dependent variable.  
 
-The remaining 79 variables are all numerical and serve as the explanatory (independent) variables. The 79 variables are comprised of two categories of signals: time domain and frequency domain. These signals were used to estimate variables of the feature vector for each pattern.  
+The remaining 79 variables are all numerical and serve as the independent (explanatory) variables. The 79 variables are comprised of two categories of signals: time domain and frequency domain. These signals were used to estimate variables of the feature vector for each pattern.  
 
-**Time domain signals (variables) - as denoted by the 't' prefix**
+**Time domain signals (variables) - as denoted by the 't' prefix**  
 *Note:*  
 * *'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.*  
 * *mean() indicates Mean value and std() indicates Standard Deviation*  
@@ -76,7 +76,7 @@ The remaining 79 variables are all numerical and serve as the explanatory (indep
 | tbodygyrojerkmag-std | s.d. of magnitude of bodygyrojerk signal  |
 
 
-**Frequency domain signals (variables) - as denoted by the 'f' prefix**
+**Frequency domain signals (variables) - as denoted by the 'f' prefix**  
 *Note:*  
 * *'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.*  
 * *mean() indicates Mean value and std() indicates Standard Deviation*
@@ -161,7 +161,7 @@ There are eight files required from the source dataset [2] to allow reproducible
 #### 3) Data Transformations in script run_analysis.R
 Five primary transformations were executed on the dataset pulled from the original source [2] in order to create a tidy dataset for this Coursera course.
 
-1. Merge training and test sets
+1) Merge training and test sets 
 After reading in all the tables explained above, the datasets split into train and test components were combined by rows into three dataframes using the rbind() command:
   * subjects - contains the subject_train.txt and subject_test.txt data
   * activities - contains the y-train.txt and y-test.txt data
@@ -169,7 +169,7 @@ After reading in all the tables explained above, the datasets split into train a
 
 After generating each of these three combined datasets the original files were removed from the environment using the rm() to keep the environment more readable to users.
 
-2. Extract only measurements on the means and standard deviations
+2) Extract only measurements on the means and standard deviations 
 The measures for mean() and std() for each of the measures were extracted from the dataset named data using the grep() command. This resulted in a dataset called dataInt - isolating only the variables of interest. As noted above, this totaled 79 variables because it included the 13 meanfreq() variables but did not include the seven angle measures that used earlier harvested mean() variables.
 
 A single data frame called transData was created by using the cbind() command to connect the three tables *subjects*, *activity*, and *dataInt*. This resulted in a 10,299 by 81 data frame with the following variables:
@@ -177,16 +177,17 @@ A single data frame called transData was created by using the cbind() command to
   * [,2] activity {plain name of ActivityID}
   * [,4:81] by variable features {from data of interest} 
 
-3. Use descriptive activity names
+3) Use descriptive activity names 
 The activities dataset was transformed according to tidy data principles by changing the numeric codes for activities into plain names (e.g., standing) as provided in the file "activity_labels.txt". This variable was also transformed into a factor variable.
 
-4. Appropriately label dataset with descriptive variables
+4) Appropriately label dataset with descriptive variables 
 As noted in the discussion forum, this was a step prone to misunderstanding. For purposes of this dataset, the instruction was interpreted to mean create descriptive variable names following tidy data principles for each of the 81 variables. This included the following transformations:
   * all variables were converted to lower case using the tolower() command
   * the parentheses after mean() and std() were removed to ease typing variable names into the console
   * the last nine variables in the dataset of interest were repaired to eliminate the duplication of the term "bodybody" to simply "body" for these three signals (fbodyaccjerkmag, fbodygyromag, fbodygyrojerkmag). The rationale was that the sequence "bodybody" did not appear in the source dataset documentation [1].
+The dashes used in the original variable names were retained as it allows for readability. The general form of the variables is *{signal name}-{statistic}-{XYZ coordinate (optional)}
 
-5. Create a second, independent tidy set with the average of each variable for each activity and each subject
+5) Create a second, independent tidy set with the average of each variable for each activity and each subject 
 A tidy dataset was created from a data table by using lapply() to apply the mean function across the 10,299 by 81 data frame. The lapply() command was used to tier the activities by subject. In other words, all observations for Subject 1 were aggregated to find the mean by activities 1 through 6 and recorded that way. This was repeated for Subjects 2 through 30. This resulted in a tidy data set of 180 rows (30 subjects * 6 activities/subject) by 81 columns.
 
 This approach meets the tidy data rules because each row is an independent observation of means and standard deviations and each column is a separate variable. This data can then be manipulated by users to summarize means and standard deviations rolled up by subject or by activity.
