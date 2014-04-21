@@ -2,11 +2,11 @@
 ## Creating a Tidy Dataset from Publically Available Data on Samsung Galaxy S Smartphones
 ====================================
 
-![alt text](http://archive.ics.uci.edu/ml/assets/logo.gif)  
-Source: archive.ics.uci.edu/ml/assets/logo.gif  
+![alt text](http://icons.iconarchive.com/icons/jonathan-rey/devices-pack-3/256/Smartphone-Android-Jelly-Bean-Samsung-Galaxy-S4-icon.png)  
+Source: http://bit.ly/1r6HmmF  
 
 **References:**  
-[1] Coursera Data Source. Retrieved from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. 
+[1] Coursera Data Source. Retrieved from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.  
 [2] Reyes-Ortiz, J.L., Anguita, D., Ghio, A., & Oneto, L. (2012, December). *Human activity recognition on smartphones using a multiclass hardware-friendly support vector machine.* Retrieved from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.  
   
  
