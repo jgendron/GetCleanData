@@ -177,7 +177,7 @@ The measures for mean() and std() for each of the measures were extracted from t
 A single data frame called transData was created by using the cbind() command to connect the three tables *subjects*, *activity*, and *dataInt*. This resulted in a 10,299 by 81 data frame with the following variables:
   * [,1] subject {from subjects}
   * [,2] activity {plain name of ActivityID}
-  * [,4:81] by variable features {from data of interest} 
+  * [,3:81] by variable features {from data of interest} 
 
 **3) Use descriptive activity names**
 
